@@ -129,18 +129,24 @@ h2.about-title {
 /* Novo container para o "Sistema Operacional Pip Boy" */
 .pip-boy-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Empurra a descrição para a direita */
     align-items: center;
-    margin-top: 60px; /* Espaço acima do novo conteúdo */
+    margin-top: 60px;
     width: 100%;
-    flex-wrap: wrap; /* Permite que os itens se ajustem em telas pequenas */
+    flex-wrap: nowrap; /* Impede a quebra de linha */
 }
 
-/* Estilo da imagem do lado esquerdo */
 .pip-boy-left {
     width: 40%;
-    max-width: 400px; /* Limita o tamanho máximo da imagem */
-    transform: translateX(250px); 
+    max-width: 400px;
+    display: flex;
+    justify-content: flex-start; /* Mantém a imagem à esquerda */
+}
+
+.pip-boy-right {
+    width: 55%;
+    text-align: right;
+    padding-left: 50px; /* Dá espaço entre a imagem e o texto */
 }
 
 .pip-boy-img {
@@ -150,12 +156,6 @@ h2.about-title {
     object-fit: cover;
 }
 
-/* Estilo do título e descrição à direita */
-.pip-boy-right {
-    width: 55%;
-    text-align: left;
-    padding-left: 20px;
-}
 
 .pip-boy-title {
     font-size: 2rem;
@@ -381,3 +381,5 @@ h2.about-title {
         font-size: 0.9rem;
     }
 }
+
+
