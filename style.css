@@ -116,6 +116,57 @@ h2.about-title {
     pointer-events: none;
 }
 
+.dev-text {
+    font-size: 1.5rem;
+    color: #FF5E1A;
+    font-weight: bold;
+    margin-top: 40px; /* Adiciona mais espaço abaixo de "DEV" */
+    font-family: 'Climate Crisis', sans-serif;
+    text-align: center;
+}
+
+/* Novo container para o "Sistema Operacional Pip Boy" */
+.pip-boy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px; /* Espaço acima do novo conteúdo */
+    width: 100%;
+}
+
+/* Estilo da imagem do lado esquerdo */
+.pip-boy-left {
+    width: 40%;
+}
+
+.pip-boy-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Estilo do título e descrição à direita */
+.pip-boy-right {
+    width: 55%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.pip-boy-title {
+    font-size: 2rem;
+    font-family: 'Archivo', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pip-boy-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Archivo', sans-serif;
+}
+
 /* Animações */
 @keyframes slideInFromLeft {
     from {
