@@ -184,11 +184,10 @@ h2.about-title {
 
 
 /* Rodapé */
-/* Rodapé */
 .footer {
     background-color: #333; /* Cor de fundo escura */
     color: #fff; /* Cor do texto branca */
-    text-align: right; /* Alinha o texto à direita */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
     padding: 20px 20px; /* Espaçamento no rodapé */
     font-size: 0.9rem; /* Letras menores */
     font-family: 'ABNT Font', sans-serif; /* Fonte ABNT */
@@ -198,6 +197,7 @@ h2.about-title {
     width: 100%; /* O rodapé ocupará toda a largura da página */
     z-index: 10;
     display: block; /* Sempre visível */
+    margin: 0;
 }
 
 /* Estilo para as informações de contato */
@@ -218,16 +218,18 @@ h2.about-title {
     text-decoration: underline;
 }
 
-/* Espaço adicional na parte inferior da página para não cobrir o conteúdo */
+/* Ajuste do conteúdo para não ser coberto pelo rodapé */
 body {
     margin-bottom: 80px; /* Ajuste o valor conforme necessário para criar um espaço para o rodapé */
 }
-/* Responsividade para telas menores */
+
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
-    .pip-boy-container {
-        flex-direction: column;
-        align-items: center;
+    .footer {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte no celular */
+        padding: 15px 10px; /* Ajusta o padding para telas menores */
     }
+}
 
     .pip-boy-left,
     .pip-boy-right {
