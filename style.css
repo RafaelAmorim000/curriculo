@@ -184,6 +184,7 @@ h2.about-title {
 
 
 /* Rodapé */
+/* Rodapé */
 .footer {
     background-color: #333; /* Cor de fundo escura */
     color: #fff; /* Cor do texto branca */
@@ -196,7 +197,7 @@ h2.about-title {
     left: 0;
     width: 100%; /* O rodapé ocupará toda a largura da página */
     z-index: 10;
-    display: none; /* Inicialmente escondido */
+    display: block; /* Sempre visível */
 }
 
 /* Estilo para as informações de contato */
