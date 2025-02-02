@@ -126,21 +126,25 @@ h2.about-title {
 }
 
 /* Novo container para o "Sistema Operacional Pip Boy" */
+/* Novo container para o "Sistema Operacional Pip Boy" */
 .pip-boy-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px; /* Espaço acima do novo conteúdo */
+    margin-top: 60px; /* Espaço acima do novo conteúdo */
     width: 100%;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas pequenas */
 }
 
 /* Estilo da imagem do lado esquerdo */
 .pip-boy-left {
     width: 40%;
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    transform: translateX(250px); 
 }
 
 .pip-boy-img {
-    width: 100%;
+    width: 100%; /* A imagem vai ocupar 100% do container */
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -163,8 +167,97 @@ h2.about-title {
 .pip-boy-description {
     font-size: 1.2rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8;
     font-family: 'Archivo', sans-serif;
+}
+
+.divider {
+    width: 80%; /* Ajuste o tamanho da linha */
+    height: 3px; /* Espessura da linha */
+    background: linear-gradient(to right, #FF5E1A, #FF5E1A 50%, #333 50%, #333); /* Gradiente de cor */
+    border: none;
+    margin: 30px auto; /* Centraliza a linha e adiciona espaço em cima e embaixo */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave abaixo da linha */
+}
+@import url('https://fonts.googleapis.com/css2?family=ABNT+Font&display=swap');
+
+
+/* Rodapé */
+.footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: right; /* Alinha o texto à direita */
+    padding: 20px 20px; /* Espaçamento no rodapé */
+    font-size: 0.9rem; /* Letras menores */
+    font-family: 'ABNT Font', sans-serif; /* Fonte ABNT */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* O rodapé ocupará toda a largura da página */
+    z-index: 10;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Estilo para as informações de contato */
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+}
+
+/* Estilo para o link do GitHub */
+.contact-info a {
+    color: #FF5E1A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efeito de hover no link do GitHub */
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Espaço adicional na parte inferior da página para não cobrir o conteúdo */
+body {
+    margin-bottom: 80px; /* Ajuste o valor conforme necessário para criar um espaço para o rodapé */
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .pip-boy-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pip-boy-left,
+    .pip-boy-right {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        transform: translateX(0px);
+    }
+
+    .pip-boy-img {
+        width: 80%; /* A imagem ficará menor em telas pequenas */
+        max-width: 300px; /* Limita o tamanho máximo da imagem */
+    }
+
+    .pip-boy-title {
+        font-size: 1.8rem;
+    }
+
+    .pip-boy-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pip-boy-title {
+        font-size: 1.5rem;
+    }
+
+    .pip-boy-description {
+        font-size: 0.9rem;
+    }
 }
 
 /* Animações */
