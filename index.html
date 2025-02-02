@@ -12,7 +12,7 @@
     <div class="content">
         <div class="left">
             <h2 class="about-title">Sobre mim</h2>
-            <p class="description">Olá, meu nome é Rafael Silva Amorim. Sou desenvolvedor apaixonado por tecnologia e programação. Sempre em busca de aprender novas ferramentas e melhorar minhas habilidades em Java.</p>
+            <p class="description">Olá, meu nome é Rafael Silva Amorim. Sou desenvolvedor apaixonado por tecnologia e programação. Sempre em busca de aprender novas ferramentas e melhorar minhas habilidades.</p>
         </div>
         <div class="right">
             <img src="src/logo.jpeg" alt="Minha imagem" class="right-img">
@@ -26,7 +26,7 @@
         <!-- Novo conteúdo: Sistema Operacional Pip Boy -->
         <div class="pip-boy-container">
             <div class="pip-boy-left">
-                <img src="src/pipboy-image.jpg" alt="Pip Boy" class="pip-boy-img">
+                <img src="src/pipboy.jpg" alt="Pip Boy" class="pip-boy-img">
             </div>
             <div class="pip-boy-right">
                 <h3 class="pip-boy-title">Sistema Operacional Pip Boy</h3>
@@ -34,5 +34,47 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Linha Dividindo as Seções -->
+    <hr class="divider">
+
+
+    <div class="pip-boy-container">
+        <div class="pip-boy-left">
+            <img src="src/cardapio.jpg" alt="Pip Boy" class="pip-boy-img">
+        </div>
+        <div class="pip-boy-right">
+            <h3 class="pip-boy-title">Cardápio Digital da Casa da Fogazza</h3>
+            <p class="pip-boy-description">O Cardápio Digital da Casa da Fogazza foi desenvolvido para oferecer uma experiência interativa e prática aos clientes. Utilizando HTML, a plataforma permite que os clientes visualizem e escolham itens do cardápio de forma simples e rápida. Garantindo um atendimento eficiente e moderno. O projeto visa combinar conveniência e inovação no atendimento ao cliente.</p>
+        </div>
+    </div>
+
+<!-- Linha Dividindo as Seções -->
+<hr class="divider">
+<!-- Rodapé -->
+<footer class="footer" id="footer">
+    <div class="contact-info">
+        <p><strong>Email:</strong> amorimrafasilva@gmail.com</p>
+        <p><strong>Telefone:</strong> (11) 96994-5105</p>
+        <p><strong>Endereço:</strong> vila canero, São Paulo, SP</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/RafaelAmorim000" target="_blank">github.com/RafaelAmorim000</a></p>
+    </div>
+</footer>
+
+<script>
+    window.onscroll = function() {showFooter()};
+
+    function showFooter() {
+        var footer = document.getElementById("footer");
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            footer.style.display = "block"; // Exibe o rodapé ao chegar ao final
+        } else {
+            footer.style.display = "none"; // Esconde o rodapé enquanto não chega ao final
+        }
+    }
+</script>
+
+</div>
 </body>
 </html>
