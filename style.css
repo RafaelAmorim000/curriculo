@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DAD9D9;
+    font-family: 'Climate Crisis', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    top: 20px;
+    overflow-x: hidden;
+    min-height: 150vh;
+}
+
+/* Nome no topo */
+h1 {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 5rem;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    animation: slideInFromLeft 1s ease-out forwards;
+    margin-top: 20px;
+}
+
+/* Container da imagem dos projetos */
+.projects-container {
+    position: relative;
+    width: 100%;
+    margin: 300px auto 50px;
+    text-align: center;
+}
+
+/* Título acima da imagem */
+.projects-title {
+    font-size: 2rem;
+    color: black;
+    font-family: 'Climate Crisis', sans-serif;
+}
+
+/* Imagem dos projetos (redonda) */
+.projects-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Texto "DEV" abaixo da imagem */
+.dev-text {
+    font-size: 1.5rem;
+    color: #FF5E1A;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Climate Crisis', sans-serif;
+    text-align: center;
+}
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 150px;
+}
+
+/* Seção da esquerda (Sobre mim) */
+.left {
+    width: 50%;
+    text-align: left;
+    padding-left: 150px;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+h2.about-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 300px;
+}
+
+.description {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Imagem do lado direito */
+.right-img {
+    width: 700px;
+    height: auto;
+    opacity: 0.7;
+    animation: slideInRight 1s ease-out forwards;
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Animações */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-90%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 0.7;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .projects-title {
+        font-size: 1.8rem;
+    }
+
+    .dev-text {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 180px;
+    }
+
+    .left {
+        width: 90%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .description {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .projects-title {
+        font-size: 1.6rem;
+    }
+
+    .dev-text {
+        font-size: 1rem;
+    }
+
+    .content {
+        margin-top: 160px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right-img {
+        width: 100%;
+        max-width: 500px;
+        right: 0px;
+        opacity: 0.7;
+        position: relative;
+        top: 20px;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-title {
+        font-size: 1.5rem;
+    }
+
+    .dev-text {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        margin-top: 140px;
+    }
+
+    .right-img {
+        max-width: 250px;
+        opacity: 0.6;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
